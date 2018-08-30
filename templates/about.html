@@ -1,0 +1,102 @@
+ {% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+{% for page in pages %}
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({{page.banner_image.url}});">
+        <div class="auto-container">
+            <h1>{{Page.title}}</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li>About Us</li>
+            </ul>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+    <!--About Section-->
+    <section class="about-section">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <h4 class="title">{{page.who_we_are_title}}</h4>
+                <h2>{{page.who_we_are_tagline}}</h2>
+                <div class="separator"><span class="flaticon-nature"></span></div>
+            </div>
+            <div class="row clearfix">
+            
+                <!--Content Column-->
+                <div class="content-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner-box">
+                         <p>{{page.who_we_are_text}}</p>
+                         <!--Accordion Box-->
+                        <ul class="accordion-box">
+                            <!--Block-->
+                            {% if accordion_Items %}
+                            {% for item in accordion_Items %}
+                            <li class="accordion block">
+                                <div class="acc-btn"><div class="icon-outer"><span class="icon fa fa-angle-right"></span></div>{{item.title}}</div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <p>{{item.text}}</p>
+                                    </div>
+                                </div>
+                            </li>
+                            {% endfor %}
+                            {% endif %}
+                        </ul><!--End Accordion Box-->   
+                    </div>
+                </div>
+                
+                <!--Image Column-->
+                <div class="image-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="image wow fadeInRight" data-wow-duration="1500ms">
+                        <figure class="image-1"><img src="images/resource/about-1.png" alt=""></figure>
+                        <figure class="image-2"><img src="images/resource/about-2.png" alt=""></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End About Section-->
+    <hr>
+    <!-- Volunteer Section -->  
+    <section class="volunteer-section">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <h3 class="title">{{page.team_title}}</h3>
+                <h2>{{page.team_tagline}}</h2>
+                <div class="separator"><span class="flaticon-nature"></span></div>
+            </div>
+
+            <div class="volunteer-carousel owl-carousel owl-theme">
+                {% if Members %}
+                    {% for member in members %}
+                        <!--Volunteer Member-->
+                        <div class="volunteer-member">
+                            <div class="inner-box clearfix">
+                                <div class="image-box">
+                                    <figure class="image"><img src="{{member.image.url}}" alt=""></figure>
+                                </div>
+                                <div class="info-box">
+                                    <h3 class="name">{{member.name}}</h3>
+                                    <span class="desingnation">{{member.position}}</span>
+                                    <p>{{member.bio_text}}</p>
+                                    <!-- <ul class="social-icon-two clearfix">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    </ul> -->
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    <!-- End Volunteer Section -->
+
+{% endfor %}
+{% endblock %}

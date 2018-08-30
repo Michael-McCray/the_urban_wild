@@ -1,0 +1,1 @@
+web: gunicorn the_wild.wsgi --log-file -

@@ -1,0 +1,265 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Urban Wild</title>
+
+<!-- Stylesheets -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'plugins/revolution/css/settings.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+<link href="{% static 'plugins/revolution/css/layers.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{% static 'plugins/revolution/css/navigation.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+<link rel="shortcut icon" href="#" type="image/x-icon">
+<link rel="icon" href="#" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="preloader"></div>
+  
+    <!-- Main Header-->
+    <header class="main-header header-style-two">
+        <!--Header-Upper-->
+        <div class="header-lower">
+            <div class="auto-container">
+                <div class="clearfix">
+                    <div class="pull-left logo-outer">
+                        <div class="logo"><a href="index.html"><img src="images/logo-2.png" alt="" title=""></a></div>
+                    </div>        
+                    <div class="nav-outer pull-right clearfix">
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->      
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation pull-left clearfix">
+                                  <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    <li><a href="{% url 'involved' %}">Get Involved</a></li>
+                                    <li><a href="{% url 'community' %}">Community</a></li>
+                                    <li><a href="{% url 'contact' %}l">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Header Upper-->
+
+
+        <!-- Sticky Header -->
+        <div class="sticky-header">
+            <div class="auto-container clearfix">
+                <!--Logo-->
+                <div class="logo pull-left">
+                    <a href="index.html" title=""><img src="images/logo-small.png" alt="" title=""></a>
+                </div>
+                <!--Right Col-->
+                <div class="pull-right">
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-header">
+                            <!-- Toggle Button -->      
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation pull-left clearfix">
+                                <ul class="navigation pull-left clearfix">
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    <li><a href="{% url 'involved' %}">Get Involved</a></li>
+                                    <li><a href="{% url 'community' %}">Community</a></li>
+                                    <li><a href="{% url 'contact' %}l">Contact Us</a></li>
+                                </ul>    
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- Main Menu End-->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End Main Header -->
+
+    {% block body_block %}
+    {% endblock %}
+<!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="auto-container">
+        
+            <!--Widgets Section-->
+            <div class="widgets-section">
+                <div class="row clearfix">
+                    <!--Big Column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget about-widget">
+                                    <div class="footer-logo">
+                                        <figure>
+                                            <a href="index.html"><img src="images/footer-logo.png" alt=""></a>
+                                        </figure>
+                                    </div>
+                                    <div class="widget-content">
+                                        <ul class="contact-info">
+                                            <li>198 West 21th Street, Suite 721 New York NY 10010</li>
+                                            <li><a href="#">Email: supportl@hubli.com</a></li>
+                                            <li>Phone: +88 (0) 101 0000 000</li>
+                                            <li>Fax: +88 (0) 202 0000 001</li>
+                                        </ul>
+
+                                        <ul class="social-icon-three clearfix">
+                                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget links-widget">
+                                    <h2 class="widget-title">Useful Link</h2>
+                                    <div class="widget-content">
+                                        <ul class="list">
+                                            <li><a href="#">Home Presentation</a></li>
+                                            <li><a href="#">Custom Image Title</a></li>
+                                            <li><a href="#">Custom Font Style</a></li>
+                                            <li><a href="#">Parallax Sections</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>  
+                            </div>         
+                        </div>
+                    </div>
+                    
+                    <!--Big Column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget post-widget">
+                                    <h2 class="widget-title">Latest Blog Post</h2>
+                                    <div class="post">
+                                        <h3><a href="blog-detail">Environment Perspective</a></h3>
+                                        <span>10 March 2018</span>
+                                    </div>
+
+                                    <div class="post">
+                                        <h3><a href="blog-detail">New Ecological Bulbs</a></h3>
+                                        <span>11 March 2018</span>
+                                    </div>
+
+                                    <div class="post">
+                                        <h3><a href="blog-detail">Protect the Environment</a></h3>
+                                        <span>12 March 2018</span>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget gallery-widget">
+                                    <h2 class="widget-title">Instagram Post</h2>
+                                    <div class="widget-content">
+                                        <p>Adcasting operational change management inside</p>
+                                        <div class="insta-carousel owl-carousel owl-theme">
+                                            <figure class="image">
+                                                <a href="images/gallery/1.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/instagram-1.jpg" alt=""></a>
+                                            </figure>
+
+                                            <figure class="image">
+                                                <a href="images/gallery/2.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/instagram-2.jpg" alt=""></a>
+                                            </figure>
+
+                                            <figure class="image">
+                                                <a href="images/gallery/3.jpg" class="lightbox-image" title="Image Title Here"><img src="images/resource/instagram-3.jpg" alt=""></a>
+                                            </figure>
+                                        </div>
+                                    </div>       
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Footer Bottom-->
+         <div class="footer-bottom">
+            <div class="auto-container clearfix">
+                <div class="copyright-text">&copy; <a href="index.html">Hubli</a> 2018. All rights reserved.</div>
+                <div class="bottom-links">
+                    <ul class="clearfix">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="donate.html">Donate Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Main Footer -->
+
+
+</div>  
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-caret-up"></span></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/57d86c9deff74328061802e2f7ba24ca/raw/9bcd2fccaed9442f1460191d6670ca5e8e08520c/bootstrap.min.js"></script>
+<!--Revolution Slider-->
+<script src="https://cdn.rawgit.com/Michael-McCray/31ce767440d84283228ef2d7efe3d787/raw/440a1141dbea75fcd377f06865ae8907b96e853b/jquery.themepunch.revolution.min.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/3973dda1633d804621321266c4e86ec6/raw/57e47706429781b4750f9d5b3498adcebf574d0b/jquery.themepunch.tools.min.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/ea725f56a73f43c076110e7643643d9c/raw/1c5830cf56f24848467ff66f00d29e7819bcecea/revolution.extension.actions.min.js"></script>
+<script src="{% static 'https://cdn.rawgit.com/Michael-McCray/587e2b5912bd78d80d94bff6b27ea8fc/raw/85a386cd206280644a00885666c844ff91b3ee01/revolution.extension.carousel.min.js' %}"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/063941084eb875280b3df4aa3ecf7da8/raw/f10a36ba64e0b76bd7f5ecff94793c9e021b2d0e/revolution.extension.kenburn.min.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/e2f28feae026c6f9392148e76b7e05de/raw/bd777121517dfb4af377b712f10cf1dfc72ae999/revolution.extension.layeranimation.min.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/aa3a843ffad151aced5de3c703a0e218/raw/ad61e54f9d2aaed053dbfd79a9c163d0c1ac4957/revolution.extension.migration.min.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/669f31f03071d66779c8b52c65733ec4/raw/ad61e54f9d2aaed053dbfd79a9c163d0c1ac4957/revolution.extension.navigation.min.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/07826c7f45c61132e8079010cbd89280/raw/dcfe3dee8c5ed27a2a8658911b18385f5e961337/revolution.extension.parallax.min.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/c4a26ba940e46066d87fe7cbf5de5753/raw/76eac5c85c41377d0b13abd47f0b61b2170bcbd5/revolution.extension.slideanims.min.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/9e1e3f46336c928051e0f15850ef22b0/raw/aa6bc401de1c93bf0d4d9fe439e26cf97a966578/revolution.extension.video.min.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/3cc67163c6c3a89fbcc4df7bbff21f30/raw/50b54bab6c9ae4e128bec3c7b3a425db14585a51/main-slider-script.js"></script>
+<!--End Revolution Slider-->
+<script src="https://cdn.rawgit.com/Michael-McCray/ec8b07dc5dd2d9f2aa04ba803abc19bb/raw/acc8bf187bd421ec4b42fb63b83f5ab8dc87dfa4/jquery.fancybox.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/952ec8ccaa65564af2c973f4015913ec/raw/785afd96abd9a47415147a71e658e5ba6b801877/isotope.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/a7db30cfe13574f32cec9d6ebfafa601/raw/b112f2f64bcac2952c141ea6b08df62ab2ea77a4/owl.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/ddee51c3b774143aed9812ef14040396/raw/8273df922be41d85f966131684e34381e606f292/wow.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/b66bd14826f942886c38c3e1443f8218/raw/1b8a7432179978535e11cf11d0b182d72a119c64/appear.js"></script>
+<script src="https://cdn.rawgit.com/Michael-McCray/9a0452507f47a9410df9fea67e250e85/raw/fc9dac3ee52d715b1b9353c20dd9b531631ca3f3/script.js"></script>
+</body>
+</html>
