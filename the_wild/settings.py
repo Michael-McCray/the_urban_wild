@@ -141,8 +141,8 @@ TEMPLATE_DIRS = (
 
 
 AWS_STORAGE_BUCKET_NAME = 'wild-static'
-AWS_ACCESS_KEY_ID = 'AKIAIUSV4RJODW4W4GTQ'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 
+AWS_SECRET_ACCESS_KEY = 
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
