@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body_block %}
-
-{% for page in page %}
     
     <!--Main Slider-->
     <section class="main-slider style-two">
@@ -344,17 +342,14 @@
     <section class="work-section">
         <div class="auto-container">
             <div class="sec-title text-center">
-                <h4 class="title">{{page.what_we_do_title}}</h4>
-                <h2>{{page.what_we_do_tagline}}</h2>
+                <h4 class="title">Our Work</h4>
+                <h2>What We Are Doing</h2>
                 <div class="separator"><span class="flaticon-nature"></span></div>
             </div>
-{% endfor %}
 
             <div class="row clearfix">
-                <div class="left-column col-md-3 col-sm-6 col-xs-12">
+                <div class="left-column col-md-4 col-sm-12 col-xs-12">
                     <div class="inner-column">
-                    {% for goal in goals %}
-                        {% if goal.right_side == 'False' %}
                         <div class="work-block">
                             <div class="inner">
                                 <img src="images/icons/wind-2.png" alt="" class="icon">
@@ -363,15 +358,11 @@
                                 <a href="#" class="read-more">Learn More</a>
                             </div>
                         </div>
-                        {% endif %}
-                    {% endfor %}
                     </div>
                 </div>
                 
-                <div class="right-column pull-right col-md-3 col-sm-6 col-xs-12">
+                <div class=" col-md-4 col-sm-12 col-xs-12">
                     <div class="inner-column">
-                    {% for goal in goals %}
-                        {% if goal.right_side == 'True' %}
                         <div class="work-block">
                             <div class="inner">
                                 <img src="images/icons/save-2.png" alt="" class="icon">
@@ -380,58 +371,307 @@
                                 <a href="#" class="read-more">Learn More</a>
                             </div>
                         </div>
-                        {% endif %}
-                    {% endfor %}
+                        
                     </div>
                 </div>
-{% for page in pages %}
-                <div class="center-image col-md-6 col-sm-12 col-xs-12">
-                    <div class="inner-box">
-                        <figure class="image"><img src="{{pages.what_we_do_center.url}}" alt=""></figure>
+
+                <div class=" col-md-4 col-sm-12 col-xs-12">
+                     <div class="inner-column">
+                    <div class="work-block">
+                        <div class="inner">
+                            <img src="images/icons/water-2.png" alt="" class="icon">
+                            <h4><a href="#">Water Refine</a></h4>
+                            <p>Podcasting operational change ment inside of workflows to establish a work. Taking seamless key </p>
+                            <a href="#" class="read-more">Learn More</a>
+                        </div>
                     </div>
+                   </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- End Work Section -->
 
-    <!-- members -->
-    <section class="volunteer-section">
+    <!-- Video Section -->
+    <section class="video-section" style="background-image: url(images/background/3.jpg);">
         <div class="auto-container">
-            <div class="sec-title text-center">
-                <h3 class="title">{{page.member_title}}</h3>
-                <h2>{{page.member_tagline}}</h2>
-                <div class="separator"><span class="flaticon-nature"></span></div>
-            </div>
-
-            <div class="volunteer-carousel owl-carousel owl-theme">
-                {% if Members %}
-                    {% for member in members %}
-                        <!--Volunteer Member-->
-                        <div class="volunteer-member">
-                            <div class="inner-box clearfix">
-                                <div class="image-box">
-                                    <figure class="image"><img src="{{member.image.url}}" alt=""></figure>
-                                </div>
-                                <div class="info-box">
-                                    <h3 class="name">{{member.name}}</h3>
-                                    <span class="desingnation">{{member.position}}</span>
-                                    <p>{{member.bio_text}}</p>
-                                    <!-- <ul class="social-icon-two clearfix">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                    </ul> -->
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                {% endif %}
+            <div class="content-box">
+                <h2>Our Experience</h2>
+                <div class="video-link"><a href="https://www.youtube.com/watch?v=Fvae8nxzVz4" class="link" data-fancybox="gallery"><span class="fa fa-caret-right"></span></a></div>
             </div>
         </div>
     </section>
+    <!-- End Video Section -->
 
-{% endfor %}
+    <!--About Section-->
+    <section class="about-section style-two">
+        <div class="auto-container">
+            <div class="row clearfix">
+                <!--Content Column-->
+                <div class="content-column pull-right col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner-box">
+                        <div class="sec-title">
+                            <h4 class="title">About</h4>
+                            <h2>Helping Animals <br> &amp; Working On <br> Environmental <br> Issues</h2>
+                            <div class="separator"><span class="flaticon-nature"></span></div>
+                        </div>
+                        <p>Capitalize on low hanging fruit to identify a ballpark value added tivity to beta test. Override the digital divide with tional clickthroughs from DevOps. Nanotechnology</p>
+                        <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.gence on cross-platform integration.</p>
+                        <a href="donate.html" class="theme-btn btn-style-two">Donate now</a>
+                    </div>
+                </div>
+                
+                <!--Image Column-->
+                <div class="image-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner-box">
+                        <div class="image wow fadeInRight" data-wow-duration="1500ms">
+                            <figure class="image"><img src="images/resource/image-2.jpg" alt=""></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End About Section-->
+
+    <!--Gallery Masonry-->
+    <section class="gallery-masonry">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <h4 class="title">Projects</h4>
+                <h2>Our Gallery</h2>
+                <div class="separator"><span class="flaticon-nature"></span></div>
+            </div>
+            <div class="masonry-items-container row clearfix">
+                <!-- Gallery Item -->
+                <div class="gallery-item masonry-item small-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="inner-box">
+                        <figure class="image"><img src="images/gallery/7.jpg" alt=""></figure>
+                        <div class="caption-box">
+                            <div class="inner">
+                                <div class="title"><h3><a href="gallery-detail.html">Nature Planet Seeding</a></h3></div>
+                                <h4>Helping Animals</h4>
+                                <div class="icon-box">
+                                    <a href="images/gallery/1.jpg" class="lightbox-image" data-fancybox="Gallery"><span class="flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Item -->
+                <div class="gallery-item masonry-item small-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="inner-box">
+                        <figure class="image"><img src="images/gallery/8.jpg" alt=""></figure>
+                        <div class="caption-box">
+                            <div class="inner">
+                                <div class="title"><h3><a href="gallery-detail.html">Nature Planet Seeding</a></h3></div>
+                                <h4>Helping Animals</h4>
+                                <div class="icon-box">
+                                    <a href="images/gallery/1.jpg" class="lightbox-image" data-fancybox="Gallery"><span class="flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item -->
+                <div class="gallery-item masonry-item col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                    <div class="inner-box">
+                        <figure class="image"><img src="images/gallery/10.jpg" alt=""></figure>
+                        <div class="caption-box">
+                            <div class="inner">
+                                <div class="title"><h3><a href="gallery-detail.html">Nature Planet Seeding</a></h3></div>
+                                <h4>Helping Animals</h4>
+                                <div class="icon-box">
+                                    <a href="images/gallery/1.jpg" class="lightbox-image" data-fancybox="Gallery"><span class="flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item -->
+                <div class="gallery-item masonry-item col-lg-4 col-lg-pull-right col-md-6 col-sm-6 col-xs-12">
+                    <div class="inner-box">
+                        <figure class="image"><img src="images/gallery/9.jpg" alt=""></figure>
+                        <div class="caption-box">
+                            <div class="inner">
+                                <div class="title"><h3><a href="gallery-detail.html">Nature Planet Seeding</a></h3></div>
+                                <h4>Helping Animals</h4>
+                                <div class="icon-box">
+                                    <a href="images/gallery/1.jpg" class="lightbox-image" data-fancybox="Gallery"><span class="flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Gallery -->
+
+    <!--Fun Facts Section-->
+    <div class="fact-counter-section" style="background-image:url(images/background/4.jpg);">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <h3>We Use The Support Of More Than <br> <span> 2 Million Activists</span> To Clean The Air And Safe Rivers</h3>
+                <div class="separator"><span class="flaticon-nature"></span></div>
+            </div>
+            <div class="fact-counter">
+                <div class="row clearfix">
+                    <!--Column-->
+                    <div class="counter-column col-md-3 col-sm-6 col-xs-12">
+                        <div class="inner">
+                            <div class="count-box">
+                                <span class="icon flaticon-cinema-award"></span>
+                                <span class="count-text" data-speed="3000" data-stop="150">0</span>
+                                <h4 class="counter-title">Project Completed</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Column-->
+                    <div class="counter-column col-md-3 col-sm-6 col-xs-12">
+                        <div class="inner">
+                            <div class="count-box">
+                                <span class="icon flaticon-tree-of-love"></span>
+                                <span class="count-text" data-speed="3000" data-stop="100">0</span>
+                                <h4 class="counter-title">Happy Donater</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Column-->
+                    <div class="counter-column col-md-3 col-sm-6 col-xs-12">
+                        <div class="inner">
+                            <div class="count-box">
+                                <span class="icon flaticon-cup-3"></span>
+                                <span class="count-text" data-speed="3000" data-stop="80">0</span> +
+                                <h4 class="counter-title">Success Mission</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Column-->
+                    <div class="counter-column col-md-3 col-sm-6 col-xs-12">
+                        <div class="inner">
+                            <div class="count-box">
+                                <span class="icon flaticon-networking"></span>
+                                <span class="count-text" data-speed="3000" data-stop="70">0</span>
+                                <h4 class="counter-title">VOLUNTEER REACHED</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Fun Facts Section-->
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section style-two">
+        <div class="auto-container">
+            <div class="testimonial-carousel owl-carousel owl-theme">
+                <!-- Slide item -->
+                <div class="slide-item">
+                    <div class="name">John Parker</div>
+                    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards offshoring.everage agile frameworks to provide a robust </p>
+                    <span class="icon flaticon-right-quotation-sign"></span>
+                </div>
+
+                <!-- Slide item -->
+                <div class="slide-item">
+                    <div class="name">John Parker</div>
+                    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards offshoring.everage agile frameworks to provide a robust </p>
+                    <span class="icon flaticon-right-quotation-sign"></span>
+                </div>
+
+                <!-- Slide item -->
+                <div class="slide-item">
+                    <div class="name">John Parker</div>
+                    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards offshoring.everage agile frameworks to provide a robust </p>
+                    <span class="icon flaticon-right-quotation-sign"></span>
+                </div>
+
+                <!-- Slide item -->
+                <div class="slide-item">
+                    <div class="name">John Parker</div>
+                    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards offshoring.everage agile frameworks to provide a robust </p>
+                    <span class="icon flaticon-right-quotation-sign"></span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Testimonials -->
+
+    <!-- News Section -->
+    <section class="news-section-two">
+        <div class="auto-container">
+            <div class="sec-title light text-center">
+                <h4 class="title">Blog</h4>
+                <h2>Recent Work</h2>
+                <div class="separator"><span class="flaticon-nature"></span></div>
+            </div>
+
+            <div class="row clearfix">
+                <!-- News Block -->
+                <div class="news-block-two col-md-4 col-sm-6 col-xs-12">
+                    <div class="inner-box">
+                        <span class="date">March 10 2018</span>
+                        <div class="image-box"><a href="blog-detail.html"><img src="images/resource/news-4.jpg" alt=""></a></div>
+                        <div class="caption-box">
+                            <h3><a href="blog-detail.html">Green Construction Practice</a></h3>
+                            <p>Bring to the table win-win survival strategies to ensure</p>
+                        </div>
+                        <a href="blog-detail.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+
+                <!-- News Block -->
+                <div class="news-block-two col-md-4 col-sm-6 col-xs-12">
+                    <div class="inner-box">
+                        <span class="date">March 10 2018</span>
+                        <div class="image-box"><a href="blog-detail.html"><img src="images/resource/news-5.jpg" alt=""></a></div>
+                        <div class="caption-box">
+                            <h3><a href="blog-detail.html">Migration Of Animal</a></h3>
+                            <p>Bring to the table win-win survival strategies to ensure</p>
+                        </div>
+                        <a href="blog-detail.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+
+                <!-- News Block -->
+                <div class="news-block-two col-md-4 col-sm-6 col-xs-12">
+                    <div class="inner-box">
+                        <span class="date">March 10 2018</span>
+                        <div class="image-box"><a href="blog-detail.html"><img src="images/resource/news-6.jpg" alt=""></a></div>
+                        <div class="caption-box">
+                            <h3><a href="blog-detail.html">Protect The Environment</a></h3>
+                            <p>Bring to the table win-win survival strategies to ensure</p>
+                        </div>
+                        <a href="blog-detail.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End News Section -->
+
+    <!--Clients Section-->
+    <section class="clients-section">            
+        <div class="sponsors-outer">
+            <!--Sponsors Carousel-->
+            <ul class="sponsors-carousel owl-carousel owl-theme">
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/4.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/5.png" alt=""></a></figure></li>
+            </ul>
+        </div>
+    </section>
+    <!--End Clients Section-->
+
 {% endblock %}
