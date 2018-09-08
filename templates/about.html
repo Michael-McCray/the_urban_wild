@@ -1,13 +1,12 @@
  {% extends 'base.html' %}
 {% load static %}
 {% block body_block %}
-{% for page in pages %}
     <!--Page Title-->
-    <section class="page-title" style="background-image:url({{page.banner_image.url}});">
+    <section class="page-title" style="background-image:url(https://i.ytimg.com/vi/PXGrRn3nlak/maxresdefault.jpg);">
         <div class="auto-container">
-            <h1>{{Page.title}}</h1>
+            <h1>About Us</h1>
             <ul class="bread-crumb clearfix">
-                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="index.html">Home </a></li>
                 <li>About Us</li>
             </ul>
         </div>
@@ -18,31 +17,48 @@
     <section class="about-section">
         <div class="auto-container">
             <div class="sec-title text-center">
-                <h4 class="title">{{page.who_we_are_title}}</h4>
-                <h2>{{page.who_we_are_tagline}}</h2>
-                <div class="separator"><span class="flaticon-nature"></span></div>
+                <h4 class="title">About Us</h4>
+                <h2>Welcome To Hubli</h2>
             </div>
             <div class="row clearfix">
             
                 <!--Content Column-->
                 <div class="content-column col-md-6 col-sm-12 col-xs-12">
                     <div class="inner-box">
-                         <p>{{page.who_we_are_text}}</p>
+                        <h3>Leverage agile frameworks to provide a robust synopsis for high level overviews. <a href="#">Iterative approaches to corporate</a></h3>
+                         <p>strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+                         <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from</p>
                          <!--Accordion Box-->
                         <ul class="accordion-box">
                             <!--Block-->
-                            {% if accordion_Items %}
-                            {% for item in accordion_Items %}
                             <li class="accordion block">
-                                <div class="acc-btn"><div class="icon-outer"><span class="icon fa fa-angle-right"></span></div>{{item.title}}</div>
+                                <div class="acc-btn"><div class="icon-outer"><span class="icon fa fa-angle-right"></span></div>Our vision</div>
                                 <div class="acc-content">
                                     <div class="content">
-                                        <p>{{item.text}}</p>
+                                        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward.</p>
                                     </div>
                                 </div>
                             </li>
-                            {% endfor %}
-                            {% endif %}
+
+                            <!--Block-->
+                            <li class="accordion block">
+                                <div class="acc-btn"><div class="icon-outer"><span class="icon fa fa-angle-right"></span></div> Our Mission</div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward.</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!--Block-->
+                            <li class="accordion block">
+                                <div class="acc-btn"><div class="icon-outer"><span class="icon fa fa-angle-right"></span></div>Detail &amp; Report</div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward.</p>
+                                    </div>
+                                </div>
+                            </li>
                         </ul><!--End Accordion Box-->   
                     </div>
                 </div>
@@ -50,53 +66,170 @@
                 <!--Image Column-->
                 <div class="image-column col-md-6 col-sm-12 col-xs-12">
                     <div class="image wow fadeInRight" data-wow-duration="1500ms">
-                        <figure class="image-1"><img src="images/resource/about-1.png" alt=""></figure>
-                        <figure class="image-2"><img src="images/resource/about-2.png" alt=""></figure>
+                        <figure class="image-1"><img src="https://i.ytimg.com/vi/PXGrRn3nlak/maxresdefault.jpg" alt=""></figure>
+                        <figure class="image-2"><img src="https://i.ytimg.com/vi/PXGrRn3nlak/maxresdefault.jpg" alt=""></figure>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!--End About Section-->
-    <hr>
+    
     <!-- Volunteer Section -->  
     <section class="volunteer-section">
         <div class="auto-container">
             <div class="sec-title text-center">
-                <h3 class="title">{{page.team_title}}</h3>
-                <h2>{{page.team_tagline}}</h2>
-                <div class="separator"><span class="flaticon-nature"></span></div>
+                <h3 class="title">Projects</h3>
+                <h2>Our volunteers</h2>
+                
             </div>
 
             <div class="volunteer-carousel owl-carousel owl-theme">
-                {% if Members %}
-                    {% for member in members %}
-                        <!--Volunteer Member-->
-                        <div class="volunteer-member">
-                            <div class="inner-box clearfix">
-                                <div class="image-box">
-                                    <figure class="image"><img src="{{member.image.url}}" alt=""></figure>
-                                </div>
-                                <div class="info-box">
-                                    <h3 class="name">{{member.name}}</h3>
-                                    <span class="desingnation">{{member.position}}</span>
-                                    <p>{{member.bio_text}}</p>
-                                    <!-- <ul class="social-icon-two clearfix">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                    </ul> -->
-                                </div>
-                            </div>
+
+                <!--Volunteer Member-->
+                <div class="volunteer-member">
+                    <div class="inner-box clearfix">
+                        <div class="image-box">
+                            <figure class="image"><img src="images/resource/volunteer-1.jpg" alt=""></figure>
                         </div>
-                    {% endfor %}
-                {% endif %}
+                        <div class="info-box">
+                            <h3 class="name">Elina Bell</h3>
+                            <span class="desingnation">Co-ordinator</span>
+                            <p>If you are going to passage of Lorem Ipsum, you need to be sure there isn’t anything the hidden in the middle </p>
+                            <ul class="social-icon-two clearfix">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Volunteer Member-->
+                <div class="volunteer-member">
+                    <div class="inner-box clearfix">
+                        <div class="image-box">
+                            <figure class="image"><img src="images/resource/volunteer-2.jpg" alt=""></figure>
+                        </div>
+                        <div class="info-box">
+                            <h3 class="name">John Smith</h3>
+                            <span class="desingnation">Manager</span>
+                            <p>If you are going to passage of Lorem Ipsum, you need to be sure there isn’t anything the hidden in the middle </p>
+                            <ul class="social-icon-two clearfix">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Volunteer Member-->
+                <div class="volunteer-member">
+                    <div class="inner-box clearfix">
+                        <div class="image-box">
+                            <figure class="image"><img src="images/resource/volunteer-1.jpg" alt=""></figure>
+                        </div>
+                        <div class="info-box">
+                            <h3 class="name">Elina Bell</h3>
+                            <span class="desingnation">Co-ordinator</span>
+                            <p>If you are going to passage of Lorem Ipsum, you need to be sure there isn’t anything the hidden in the middle </p>
+                            <ul class="social-icon-two clearfix">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Volunteer Member-->
+                <div class="volunteer-member">
+                    <div class="inner-box clearfix">
+                        <div class="image-box">
+                            <figure class="image"><img src="images/resource/volunteer-2.jpg" alt=""></figure>
+                        </div>
+                        <div class="info-box">
+                            <h3 class="name">John Smith</h3>
+                            <span class="desingnation">Manager</span>
+                            <p>If you are going to passage of Lorem Ipsum, you need to be sure there isn’t anything the hidden in the middle </p>
+                            <ul class="social-icon-two clearfix">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Volunteer Member-->
+                <div class="volunteer-member">
+                    <div class="inner-box clearfix">
+                        <div class="image-box">
+                            <figure class="image"><img src="images/resource/volunteer-1.jpg" alt=""></figure>
+                        </div>
+                        <div class="info-box">
+                            <h3 class="name">Elina Bell</h3>
+                            <span class="desingnation">Co-ordinator</span>
+                            <p>If you are going to passage of Lorem Ipsum, you need to be sure there isn’t anything the hidden in the middle </p>
+                            <ul class="social-icon-two clearfix">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Volunteer Member-->
+                <div class="volunteer-member">
+                    <div class="inner-box clearfix">
+                        <div class="image-box">
+                            <figure class="image"><img src="images/resource/volunteer-2.jpg" alt=""></figure>
+                        </div>
+                        <div class="info-box">
+                            <h3 class="name">John Smith</h3>
+                            <span class="desingnation">Manager</span>
+                            <p>If you are going to passage of Lorem Ipsum, you need to be sure there isn’t anything the hidden in the middle </p>
+                            <ul class="social-icon-two clearfix">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
     <!-- End Volunteer Section -->
 
-{% endfor %}
+    <!--Clients Section-->
+    <section class="clients-section">            
+        <div class="sponsors-outer">
+            <!--Sponsors Carousel-->
+            <ul class="sponsors-carousel owl-carousel owl-theme">
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/4.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/5.png" alt=""></a></figure></li>
+            </ul>
+        </div>
+    </section>
+    <!--End Clients Section-->
+
 {% endblock %}
