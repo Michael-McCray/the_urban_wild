@@ -7,7 +7,7 @@
 <title>The Urban Wild</title>
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 
 
 <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
@@ -16,9 +16,40 @@
 <link href="{% static 'plugins/revolution/css/navigation.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
 <link href="{% static 'css/style.css' %}" rel="stylesheet">
 <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="shortcut icon" href="#" type="image/x-icon">
-<link rel="icon" href="#" type="image/x-icon">
+<link rel="shortcut icon" href="#" type="{% static 'image/x-icon' %}">
+<link rel="icon" href="#" type="{% static 'image/x-icon' %}">
+<style type="text/css">
+    @import "bourbon";
+
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,500,700);
+
+
+@font-face {
+  font-family: "Material-Design-Icons";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.eot");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.ttf") format("truetype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.svg#Material-Design-Icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="mdi-"], .select-wrapper span.select-dropdown:after, [class*=" mdi-"] {
+  font-family: "Material-Design-Icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 30px;
+}
+.tparrows.tp-rightarrow:before {
+    content: '\e61b';
+}
+
+</style>
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -136,6 +167,18 @@
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-caret-up"></span></div>
 
+<script type="text/javascript">
+    $(function(){
+  $('input').on('keyup', function(){
+    var $this = $(this);
+    var val = $this.val();
+    
+    
+    $('[class*="mdi"]').css('color','black');
+    $('.icons [class*="'+ val +'"]').css('color','red');
+  })
+});
+</script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdn.rawgit.com/Michael-McCray/57d86c9deff74328061802e2f7ba24ca/raw/9bcd2fccaed9442f1460191d6670ca5e8e08520c/bootstrap.min.js"></script>
 <!--Revolution Slider-->

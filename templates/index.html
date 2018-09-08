@@ -1,7 +1,33 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body_block %}
+<style type="text/css">
+     @font-face {
+      font-family: "Material-Design-Icons";
+      src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.eot");
+      src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.ttf") format("truetype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.svg#Material-Design-Icons") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+
+    .tparrows:before {
+    font-family: "Material-Design-Icons";
+    font-size: 30px;
+    color: #fff;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+}
+    .tparrows.tp-rightarrow:before {
+        content: '\e89b';
+    }
+    .tparrows.tp-leftarrow:before {
+        content: '\e89a';
+    }
     
+
+</style>
     <!--Main Slider-->
     <section class="main-slider style-two">
         <div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_two_wrapper" data-source="gallery">
@@ -263,7 +289,7 @@
                     <div class="name"> “Just one square metre gives you more yield than in one acre of land. That’s an ideal system for a developing country. [It] will produce up to 300 cucumbers a year.… A system like that can supply a family with fresh vegetables and with vitamins and also with protein”</div>
                     <p>Dr. Nick Savidov, Aquaponics researcher and leader at the Aquaculture Centre of Excellence at Lethbridge College
                     </p>
-                    <span class="icon flaticon-right-quotation-sign"></span>
+                    <!-- <span class="icon flaticon-right-quotation-sign"></span> -->
                 </div>
 
                 <!-- Slide item -->
@@ -271,7 +297,7 @@
                     <div class="name">“[Plants] grow extremely rapidly because they have all the nutrients and water they need. It’s much better than field production because in the soil, you have insects and not enough water or nutrients.”
                 </div>
                     <p>Dr. James Rakocy, “Father of Aquaponics,” and former professor at the University of the Virgin Islands</p>
-                    <span class="icon flaticon-right-quotation-sign"></span>
+                    <!-- <span class="icon flaticon-right-quotation-sign"></span> -->
                 </div>
 
 
@@ -294,5 +320,16 @@
         </div>
     </section>
     <!--End Clients Section-->
-
+<script type="text/javascript">
+    $(function(){
+  $('input').on('keyup', function(){
+    var $this = $(this);
+    var val = $this.val();
+    
+    
+    $('[class*="mdi"]').css('color','black');
+    $('.icons [class*="'+ val +'"]').css('color','red');
+  })
+});
+</script>
 {% endblock %}
