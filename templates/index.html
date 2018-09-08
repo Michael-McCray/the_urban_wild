@@ -9,6 +9,22 @@
       font-weight: normal;
       font-style: normal;
     }
+    @font-face {
+      font-family: "Flaticon";
+      src: url("https://cdn.rawgit.com/Michael-McCray/5e3f45af6369e04e32ac4b60f718db1e/raw/011b1f7b277a4edbbff65ca20d74d95f0e07f744/flaticon.eot");
+      src: url("https://cdn.rawgit.com/Michael-McCray/5e3f45af6369e04e32ac4b60f718db1e/raw/011b1f7b277a4edbbff65ca20d74d95f0e07f744/flaticon.eot?#iefix") format("embedded-opentype"),
+           url("https://cdn.rawgit.com/Michael-McCray/edfa5818a53ab12a674385550f633482/raw/869390edfb0b0f68b482b18038cfbc67635b0dc6/flaticon.woff") format("woff"),
+           url("https://cdn.rawgit.com/Michael-McCray/0ae9446e790de15c53b7ff1ad95f0db7/raw/4a2240edae02928870bdf7bbd4d86babe07138e9/flaticon.ttf") format("truetype"),
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+      font-family: Flaticon;
+      font-style: normal;
+    }
+
 
 
     .tparrows:before {
@@ -200,7 +216,7 @@
             <div class="sec-title text-center">
                 <h4 class="title">Our Work</h4>
                 <h2>What We Are Doing</h2>
-                
+                <div class="separator"><span class="flaticon-nature"></span></div>
             </div>
 
             <div class="row clearfix">
@@ -320,16 +336,5 @@
         </div>
     </section>
     <!--End Clients Section-->
-<script type="text/javascript">
-    $(function(){
-  $('input').on('keyup', function(){
-    var $this = $(this);
-    var val = $this.val();
-    
-    
-    $('[class*="mdi"]').css('color','black');
-    $('.icons [class*="'+ val +'"]').css('color','red');
-  })
-});
-</script>
+
 {% endblock %}

@@ -20,36 +20,7 @@
 
 <link rel="shortcut icon" href="#" type="{% static 'image/x-icon' %}">
 <link rel="icon" href="#" type="{% static 'image/x-icon' %}">
-<style type="text/css">
-    @import "bourbon";
 
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,500,700);
-
-
-@font-face {
-  font-family: "Material-Design-Icons";
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.eot");
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.ttf") format("truetype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.svg#Material-Design-Icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="mdi-"], .select-wrapper span.select-dropdown:after, [class*=" mdi-"] {
-  font-family: "Material-Design-Icons";
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 30px;
-}
-.tparrows.tp-rightarrow:before {
-    content: '\e61b';
-}
-
-</style>
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -60,17 +31,18 @@
   <div class="page-wrapper">
     <!-- Preloader -->
     <div class="preloader"></div>
-  
-    <!-- Main Header-->
-    <header class="main-header header-style-two">
-        <!--Header-Upper-->
+  <!-- Main Header-->
+    <header class="main-header header-style-one">
+        <!-- Main Box -->
         <div class="header-lower">
             <div class="auto-container">
-                <div class="clearfix">
-                    <div class="pull-left logo-outer">
-                        <div class="logo"><a href="index.html"><img src="images/logo-2.png" alt="" title=""></a></div>
-                    </div>        
-                    <div class="nav-outer pull-right clearfix">
+               <div class="main-box clearfix">
+                    <!--Logo Box-->
+                    <div class="logo-box">
+                        <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+                    </div>
+                    <!--Nav Outer-->
+                    <div class="nav-outer clearfix">
                         <!-- Main Menu -->
                         <nav class="main-menu">
                             <div class="navbar-header">
@@ -83,23 +55,22 @@
                             </div>
                             
                             <div class="navbar-collapse collapse clearfix">
-                                <ul class="navigation pull-left clearfix">
-                                  <li><a href="{% url 'index' %}">Home</a></li>
+                                <ul class="navigation pull-right clearfix">
+                                    <li><a href="{% url 'index' %}">Home</a></li>
                                     <li><a href="{% url 'about' %}">About</a></li>
                                     <li><a href="{% url 'involved' %}">Blog</a></li>
                                     <li>
                                     <script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
-                                    <a class="dbox-donation-button" href="https://donorbox.org/donate-to-the-urban-wild">Donate</a></li>
+                                    <a class="dbox-donation-button" href="https://donorbox.org/donate-to-the-urban-wild">Donate</a></li>   
                                 </ul>
                             </div>
+
                         </nav>
                         <!-- Main Menu End-->
                     </div>
                 </div>
             </div>
         </div>
-        <!--End Header Upper-->
-
 
         <!-- Sticky Header -->
         <div class="sticky-header">
@@ -123,12 +94,12 @@
                         
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation pull-left clearfix">
-                                <ul class="navigation pull-left clearfix">
-                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'index' %}">Home</a></li>
                                     <li><a href="{% url 'about' %}">About</a></li>
                                     <li><a href="{% url 'involved' %}">Blog</a></li>
-                                    <li><script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
-                                    <a class="dbox-donation-button" href="https://donorbox.org/donate-to-the-urban-wild">Donate</a></li>
+                                    <li>
+                                    <script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
+                                    <a class="dbox-donation-button" href="https://donorbox.org/donate-to-the-urban-wild">Donate</a></li>      
                             </ul>
                         </div>
                     </nav>
@@ -138,7 +109,7 @@
         </div>
     </header>
     <!--End Main Header -->
-
+    
     {% block body_block %}
     {% endblock %}
 <!-- Main Footer -->
@@ -166,19 +137,6 @@
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-caret-up"></span></div>
-
-<script type="text/javascript">
-    $(function(){
-  $('input').on('keyup', function(){
-    var $this = $(this);
-    var val = $this.val();
-    
-    
-    $('[class*="mdi"]').css('color','black');
-    $('.icons [class*="'+ val +'"]').css('color','red');
-  })
-});
-</script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdn.rawgit.com/Michael-McCray/57d86c9deff74328061802e2f7ba24ca/raw/9bcd2fccaed9442f1460191d6670ca5e8e08520c/bootstrap.min.js"></script>
 <!--Revolution Slider-->
