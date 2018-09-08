@@ -25,7 +25,7 @@ SECRET_KEY = 'b9f!7uj7_jc+uonn4dkp$k-hq56owk78j@$y(kk8ppqlq3d0(h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', 'www.theurbanwild.us', 'theurbanwild.us']
 
 
 # Application definition
@@ -130,32 +130,32 @@ TEMPLATE_DIRS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_PATH = os.path.join(BASE_DIR, "static")
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_final')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-STATIC_URL = '/static/'
+# STATIC_PATH = os.path.join(BASE_DIR, "static")
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static_final')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# STATIC_URL = '/static/'
 
 # STATICFILES_DIRS = (
 #        STATIC_PATH,
 #        )
 
 
-# AWS_STORAGE_BUCKET_NAME = 'wild-static'
-# AWS_ACCESS_KEY_ID = 'AKIAIJHJNBBNWPMTRWDA'
-# AWS_SECRET_ACCESS_KEY = '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'
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_STORAGE_BUCKET_NAME = 'wild-static'
+AWS_ACCESS_KEY_ID = 'AKIAIJHJNBBNWPMTRWDA'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
-# AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
-#         'Access-Control-Allow-Origin' : '*'
-#     }
+AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
+        'Access-Control-Allow-Origin' : '*'
+    }
 
-# STATICFILES_LOCATION = 'static-final'
-# STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-# STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+STATICFILES_LOCATION = 'static-final'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
 
-# MEDIAFILES_LOCATION = 'media'
-# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
-# DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+MEDIAFILES_LOCATION = 'media'
+MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static-final"),
