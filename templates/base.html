@@ -9,7 +9,6 @@
 <!-- Stylesheets -->
 
 
-
 <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
 <link href="{% static 'plugins/revolution/css/settings.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
 <link href="{% static 'plugins/revolution/css/layers.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
@@ -18,12 +17,47 @@
 <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="shortcut icon" href="#" type="{% static 'image/x-icon' %}">
-<link rel="icon" href="#" type="{% static 'image/x-icon' %}">
+<link rel="shortcut icon" type="image/png" href="{% static 'img/fav.png' %}"/>
+<link rel="shortcut icon" type="image/png" href="{% static 'img/fav.png' %}"/>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'css/main_style.css' %}">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<style type="text/css">
+    
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #517423 !important;
+}
+button {
+  color: #fff;
+  font-size: 1.25em;
+  border-style: none;
+  text-transform: uppercase;
+  border-radius: none;
+  transition: all 0.3s ease-in-out;
+  background-color: #517423;
+  
+}
+button.reg{
+  width: 220px;
+  height: 40px;
+}
+@media only screen and (max-width: 799px){
+    button.reg{
+        width: 90vw;
+        margin: 5px;
+
+}
+button.og:hover {
+  -webkit-transform: scale(1.15, 1.15);
+  transform: scale(1.15, 1.15);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+</style>
 
 </head>
 
@@ -31,18 +65,40 @@
   <div class="page-wrapper">
     <!-- Preloader -->
     <div class="preloader"></div>
-  <!-- Main Header-->
-    <header class="main-header header-style-one">
-        <!-- Main Box -->
+    
+    <!-- Main Header-->
+    <header class="main-header header-style-two">
+        <!--Top-bar -->
+        <!-- <div class="header-top">
+            <div class="auto-container">
+                <div class="inner-container clearfix">
+                    <div class="top-left">
+                        <ul class="clearfix">
+                            <li><i class="flaticon-smartphone"></i><a href="#">(1800) 123 4567</a></li>
+                            <li><i class="flaticon-e-mail-envelope"></i><a href="#">info@gogreen.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="top-right">
+                        <ul class="social-icon-one clearfix">
+                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
+                            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                            <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+ -->
+        <!--Header-Upper-->
         <div class="header-lower">
             <div class="auto-container">
-               <div class="main-box clearfix">
-                    <!--Logo Box-->
-                    <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="https://drive.google.com/file/d/1VGobntzd-jyvHLPXNGZdi7F58_U_bGBg/view?usp=sharing" alt=""></a></div>
-                    </div>
-                    <!--Nav Outer-->
-                    <div class="nav-outer clearfix">
+                <div class="clearfix">
+                    <div class="pull-left logo-outer">
+                        <div class="logo"><a href="{% url 'index' %}"><img style="height: 10vh" src="{% static 'img/logo.png' %}" alt=""></a></div>
+                    </div>        
+                    <div class="nav-outer pull-right clearfix">
                         <!-- Main Menu -->
                         <nav class="main-menu">
                             <div class="navbar-header">
@@ -55,7 +111,7 @@
                             </div>
                             
                             <div class="navbar-collapse collapse clearfix">
-                                <ul class="navigation pull-right clearfix">
+                                <ul class="navigation pull-left clearfix">
                                     <li><a href="{% url 'index' %}">Home</a></li>
                                     <li><a href="{% url 'about' %}">About</a></li>
                                     <li><a href="{% url 'involved' %}">Blog</a></li>
@@ -63,21 +119,24 @@
                                     <script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
                                     <a class="dbox-donation-button" href="https://donorbox.org/donate-to-the-urban-wild">Donate</a></li>   
                                 </ul>
+                                    
+                                </ul>
                             </div>
-
                         </nav>
                         <!-- Main Menu End-->
                     </div>
                 </div>
             </div>
         </div>
+        <!--End Header Upper-->
+
 
         <!-- Sticky Header -->
         <div class="sticky-header">
             <div class="auto-container clearfix">
                 <!--Logo-->
                 <div class="logo pull-left">
-                    <a href="index.html" title=""><img src="images/logo-small.png" alt="" title=""></a>
+                    <a href="{% url 'index' %}" title=""><img style="height: 10vh" src="{% static 'img/logoW.png' %}" alt=""></a>
                 </div>
                 <!--Right Col-->
                 <div class="pull-right">
@@ -99,7 +158,8 @@
                                     <li><a href="{% url 'involved' %}">Blog</a></li>
                                     <li>
                                     <script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
-                                    <a class="dbox-donation-button" href="https://donorbox.org/donate-to-the-urban-wild">Donate</a></li>      
+                                    <a class="dbox-donation-button" href="https://donorbox.org/donate-to-the-urban-wild">Donate</a></li>   
+                                </ul>
                             </ul>
                         </div>
                     </nav>
@@ -109,7 +169,6 @@
         </div>
     </header>
     <!--End Main Header -->
-    
     {% block body_block %}
     {% endblock %}
 <!-- Main Footer -->
@@ -118,7 +177,7 @@
         <!--Footer Bottom-->
          <div class="footer-bottom">
             <div class="auto-container clearfix">
-                <div class="copyright-text">&copy; <a href="index.html">Hubli</a> 2018. All rights reserved.</div>
+                <div class="copyright-text">&copy; <a href="index.html">The Urban Wild</a> 2018. All rights reserved.</div>
                 <div class="bottom-links">
                     <ul class="clearfix">
                         <li><a href="#">About Us</a></li>

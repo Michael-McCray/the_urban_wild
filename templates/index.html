@@ -1,34 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body_block %}
-<style type="text/css">
-     @font-face {
-      font-family: "Material-Design-Icons";
-      src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.eot");
-      src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.ttf") format("truetype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.svg#Material-Design-Icons") format("svg");
-      font-weight: normal;
-      font-style: normal;
-    }
-
-
-
-    .tparrows:before {
-    font-family: "Material-Design-Icons";
-    font-size: 30px;
-    color: #fff;
-    display: block;
-    line-height: 40px;
-    text-align: center;
-}
-    .tparrows.tp-rightarrow:before {
-        content: '\e89b';
-    }
-    .tparrows.tp-leftarrow:before {
-        content: '\e89a';
-    }
-    
-
-</style>
     <!--Main Slider-->
     <section class="main-slider style-two">
         <div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_two_wrapper" data-source="gallery">
@@ -37,7 +9,7 @@
                     <!-- Slide 1 -->
                     <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1667" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="https://i.ytimg.com/vi/PXGrRn3nlak/maxresdefault.jpg" data-title="Slide Title" data-transition="parallaxvertical">
                         
-                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://i.ytimg.com/vi/PXGrRn3nlak/maxresdefault.jpg"> 
+                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{% static 'img/water.jpg' %}"> 
                         
                         <div class="tp-caption tp-resizeme" 
                         data-paddingbottom="[0,0,0,0]"
@@ -55,7 +27,7 @@
                         data-x="['center','center','center','center']"
                         data-y="['top','top','top','top']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                           <h1 class="title">Water Scarcity</h1>
+                           <h1 class="title">WATER SCARCITY</h1>
                         </div>
 
                         <div class="tp-caption" 
@@ -76,10 +48,11 @@
                         data-y="['top','top','top','top']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
                             <h2 style="font-size: .5em">
-                                By 2025, an estimated 1.8 billion will be in a water 
-                                <br>scarce state, but we can useclosed-loop 
-                                <br>agricultural systemsthat use 
-                                <br>90% less water.
+                                By 2025, an estimated 1.8 billion people will be in a water 
+                                <br>scarce state globally. By implementing closed loop 
+                                <br>agriculture systems, we can use 90% less water 
+                                <br>to grow our food.
+                            </h2>
                         </div>
                         
                         
@@ -88,7 +61,7 @@
                     <!-- Slide 1 -->
                     <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1668" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="https://i.ytimg.com/vi/PXGrRn3nlak/maxresdefault.jpg" data-title="Slide Title" data-transition="parallaxvertical">
                         
-                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://i.ytimg.com/vi/PXGrRn3nlak/maxresdefault.jpg"> 
+                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{% static 'img/fields.jpg' %}"> 
                         
                         <div class="tp-caption tp-resizeme" 
                         data-paddingbottom="[0,0,0,0]"
@@ -106,7 +79,7 @@
                         data-x="['center','center','center','center']"
                         data-y="['top','top','top','top']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                           <h1 class="title">Food Scarcity</h1>
+                           <h1 class="title">FOOD SECURITY</h1>
                         </div>
 
                         <div class="tp-caption" 
@@ -127,11 +100,11 @@
                         data-y="['top','top','top','top']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
                             <h2 style="font-size: .5em">
-                                Our current food infrastructure has left 1 in 9 people 
-                                <br>in a state of food scarcity but with scalable, 
-                                <br>biomimicry systems we can produce 4x the 
-                                <br>yield without the use of chemicals,
-                                <br>hormones or pesticides.
+                                 Monocultures have left our soil depleted, riddled with
+                                 <br>pesticides, and 12% of the population in a food 
+                                 <br>insecure state. We must make sustainable 
+                                 <br>agriculture systems more accessible, 
+                                 <br>safe, and sufficient.
                             </h2>
                         </div>
                         
@@ -141,7 +114,7 @@
                     <!-- Slide 1 -->
                     <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1669" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="https://i.ytimg.com/vi/PXGrRn3nlak/maxresdefault.jpg" data-title="Slide Title" data-transition="parallaxvertical">
                         
-                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://i.ytimg.com/vi/PXGrRn3nlak/maxresdefault.jpg"> 
+                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{% static 'img/Farm.jpg' %}"> 
                         
                         <div class="tp-caption tp-resizeme" 
                         data-paddingbottom="[0,0,0,0]"
@@ -159,7 +132,7 @@
                         data-x="['center','center','center','center']"
                         data-y="['top','top','top','top']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                           <h1 class="title">Technology Convergence</h1>
+                           <h1 class="title">AG-TECH EDUCATION</h1>
                         </div>
 
                         <div class="tp-caption" 
@@ -180,15 +153,20 @@
                         data-y="['top','top','top','top']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
                             <h2 style="font-size: .5em">
-                            Using intergrated, closed-loop systems like aquaponics, we 
-                            <br>can produce safe and sufficient food systems that have 
-                            <br>less environmental impact than outdated food 
-                            <br>systems like pesticide-ridden monocultures 
-                            <br>and disease-ridden fish farms.</h2>
+                                It's time to re-think our food systems. Locally and globally,
+                                <br>our systems are costly, unjust, and unsustainable. By 
+                                <br>making agricultural technology more accessible to 
+                                <br>underserved communities,we can educate & empower 
+                                <br>populations that otherwise, would be vulnerable 
+                                <br>to the impacts of are outdated 
+                                <br>food infrastructure.
+                            </h2>
+                             
                         </div>
                         
 
-                    </li>                   
+                    </li>
+                                         
                 </ul>
             </div>
         </div>
@@ -199,8 +177,7 @@
     <section class="work-section">
         <div class="auto-container">
             <div class="sec-title text-center">
-                <h4 class="title">Our Work</h4>
-                <h2>What We Are Doing</h2>
+                <h2>What We Do</h2>
             </div>
 
             <div class="row clearfix">
@@ -208,9 +185,9 @@
                     <div class="inner-column">
                         <div class="work-block">
                             <div class="inner">
-                                <img src="images/icons/wind-2.png" alt="" class="icon">
-                                <h4><a href="#">EDUCATIONAL PROGRAMS</a></h4>
-                                <p>Partner with CBOs to host community programsLaunch sustainability & agricultural technology initiatives in public schools and online Develop school-based training programs to plug graduates into agtech job roles </p>
+                                <img src="{% static 'img/exchange.png' %}" alt="" class="icon">
+                                <h4><a href="#">Educational Programs</a></h4>
+                                <p>We provide educational workshops and programs on the necessity and usage of agricultural technology.</p>
                                 <a href="#" class="read-more">Learn More</a>
                             </div>
                         </div>
@@ -221,9 +198,9 @@
                     <div class="inner-column">
                         <div class="work-block">
                             <div class="inner">
-                                <img src="images/icons/save-2.png" alt="" class="icon">
-                                <h4><a href="#">COMMUNITY CENTRIC GREENSPACES</a></h4>
-                                <p>Workshop series - Local Community Gardens Secure vacant lots to launch community centric green space(s) modelProvide supplemental emergency resources to families battling food scarcity</p>
+                                <img src="{% static 'img/ecology.png' %}" alt="" class="icon">
+                                <h4><a href="#">Empower</a></h4>
+                                <p>We provide job training and workforce development to the populations we serve who are looking to begin a career in ag-tech.</p>
                                 <a href="#" class="read-more">Learn More</a>
                             </div>
                         </div>
@@ -235,9 +212,9 @@
                      <div class="inner-column">
                     <div class="work-block">
                         <div class="inner">
-                            <img src="images/icons/water-2.png" alt="" class="icon">
-                            <h4><a href="#">REVENUE GENREATING URBAN FARMS</a></h4>
-                            <p> Raise awareness of agtech advantages through global agriculture networks Connect farmers with financing resources to fund implementation stage Assist farmers with piloting greenhouses and converting to sustainable business model </p>
+                            <img src="{% static 'img/home.png' %}" alt="" class="icon">
+                            <h4><a href="#">Implement</a></h4>
+                            <p>We provide resources and consultation on how to design, implement and maintain closed-loop sustainable food systems.</p>
                             <a href="#" class="read-more">Learn More</a>
                         </div>
                     </div>
@@ -256,13 +233,14 @@
                 <div class="content-column pull-right col-md-6 col-sm-12 col-xs-12">
                     <div class="inner-box">
                         <div class="sec-title">
-                            <h4 class="title">About Us</h4>
+                            <h4 class="title">News</h4>
                             <h2>Join Us for our <br>  Debut Event! </h2>
                             
                         </div>
-                        <p>Event INFO</p>
+                        <p>Welcome to the Wild!The UNFCU Foundation Headquarters | 24-01 44th Rd | Long Island City, NY 11101 Wednesday, September 26, 2018 from 6:00 PM to 9:00 PM (EDT)</p>
                         <p>RSVP Here: Link</p>
-                        <a class="dbox-donation-button" href="https://donorbox.org/donate-to-the-urban-wild" style="background:#5cb85c url(https://d1iczxrky3cnb2.cloudfront.net/white_logo.png) no-repeat 37px center; color: #fff;text-decoration: none;font-family: Verdana,sans-serif;display: inline-block;font-size: 16px;padding: 15px 38px 15px 75px; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; box-shadow: 0 1px 0 0 #408040; text-shadow: 0 1px rgba(0, 0, 0, 0.3);" >Donate</a>
+                        <a href="https://www.eventbrite.com/e/welcome-to-the-wild-tickets-46744434863"><button class="reg og">R.S.V.P.</button></a>
+                        <a href="https://www.instagram.com/changefoodforgood/"><button class="reg og">Follow US</button></a>
                     </div>
                 </div>
                 
@@ -270,7 +248,7 @@
                 <div class="image-column col-md-6 col-sm-12 col-xs-12">
                     <div class="inner-box">
                         <div class="image wow fadeInRight" data-wow-duration="1500ms">
-                            <figure class="image"><img src="https://i.ytimg.com/vi/PXGrRn3nlak/maxresdefault.jpg" alt=""></figure>
+                            <figure class="image"><img src="{% static 'img/EventFlier.png' %}" alt=""></figure>
                         </div>
                     </div>
                 </div>
