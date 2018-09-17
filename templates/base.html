@@ -7,6 +7,12 @@
 <title>The Urban Wild</title>
 
 <!-- Stylesheets -->
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/css/mdb.min.css" rel="stylesheet">
 
 
 <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
@@ -20,43 +26,42 @@
 <link rel="shortcut icon" type="image/png" href="{% static 'img/fav.png' %}"/>
 <link rel="shortcut icon" type="image/png" href="{% static 'img/fav.png' %}"/>
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+
 <link rel="stylesheet" type="text/css" href="{% static 'css/main_style.css' %}">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
 <style type="text/css">
     
-a {
-    text-decoration: none;
-    cursor: pointer;
-    color: #517423 !important;
-}
-button {
-  color: #fff;
-  font-size: 1.25em;
-  border-style: none;
-  text-transform: uppercase;
-  border-radius: none;
-  transition: all 0.3s ease-in-out;
-  background-color: #517423;
-  
-}
-button.reg{
-  width: 220px;
-  height: 40px;
-}
-@media only screen and (max-width: 799px){
+    button {
+      color: #fff;
+      font-size: 1.25em;
+      border-style: none;
+      text-transform: uppercase;
+      border-radius: none;
+      transition: all 0.3s ease-in-out;
+      background-color: #517423;
+      
+    }
     button.reg{
-        width: 90vw;
-        margin: 5px;
+      width: 220px;
+      height: 40px;
+    }
+    @media only screen and (max-width: 799px){
+        button.reg{
+            width: 90vw;
+            margin: 5px;
 
-}
-button.og:hover {
-  -webkit-transform: scale(1.15, 1.15);
-  transform: scale(1.15, 1.15);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
+    }
+    button.og:hover {
+      -webkit-transform: scale(1.15, 1.15);
+      transform: scale(1.15, 1.15);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    
 </style>
 
 </head>
@@ -193,6 +198,19 @@ button.og:hover {
 
 </div>  
 <!--End pagewrapper-->
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/js/mdb.min.js"></script>
+<script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-caret-up"></span></div>

@@ -1,6 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body_block %}
+<style type="text/css">
+
+@media only screen and (min-width: 799px){
+    .main-slider.style-two .title{
+        font-size: 6em !important;
+
+    }
+    .inner{
+        font-size:.5em !important;
+    }
+}
+@media only screen and (max-width: 799px){
+    .main-slider.style-two .title{
+        font-size: 35px !important;
+    }
+    .inner{
+        font-size: 13.8px !important;
+    }
+}
+</style>
+
     <!--Main Slider-->
     <section class="main-slider style-two">
         <div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_two_wrapper" data-source="gallery">
@@ -47,10 +68,11 @@
                         data-x="['center','center','center','center']"
                         data-y="['top','top','top','top']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <h2 style="font-size: .5em">
+                            <h2 class="inner">
                                 By 2025, an estimated 1.8 billion people will be in a water 
-                                <br>scarce state globally. By implementing closed loop 
-                                <br>agriculture systems, we can use 90% less water 
+                                <br>scarce state globally. <br>
+                                <br>By implementing closed loop agriculture systems,
+                                <br>we can use 90% less water 
                                 <br>to grow our food.
                             </h2>
                         </div>
@@ -79,7 +101,7 @@
                         data-x="['center','center','center','center']"
                         data-y="['top','top','top','top']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                           <h1 class="title">FOOD SECURITY</h1>
+                           <h1 class="title" >FOOD SECURITY</h1>
                         </div>
 
                         <div class="tp-caption" 
@@ -99,12 +121,12 @@
                         data-x="['center','center','center','center']"
                         data-y="['top','top','top','top']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <h2 style="font-size: .5em">
+                            <h2 class="inner">
                                  Monocultures have left our soil depleted, riddled with
                                  <br>pesticides, and 12% of the population in a food 
-                                 <br>insecure state. We must make sustainable 
-                                 <br>agriculture systems more accessible, 
-                                 <br>safe, and sufficient.
+                                 <br>insecure state.<br>
+                                 <br> We must make sustainable agriculture systems
+                                 <br> more accessible, safe, and sufficient.
                             </h2>
                         </div>
                         
@@ -152,10 +174,10 @@
                         data-x="['center','center','center','center']"
                         data-y="['top','top','top','top']"
                         data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <h2 style="font-size: .5em">
+                            <h2 class="inner">
                                 It's time to re-think our food systems. Locally and globally,
-                                <br>our systems are costly, unjust, and unsustainable. By 
-                                <br>making agricultural technology more accessible to 
+                                <br>our systems are costly, unjust, and unsustainable.<br>
+                                <br>By making agricultural technology more accessible to 
                                 <br>underserved communities,we can educate & empower 
                                 <br>populations that otherwise, would be vulnerable 
                                 <br>to the impacts of are outdated 
@@ -186,9 +208,9 @@
                         <div class="work-block">
                             <div class="inner">
                                 <img src="{% static 'img/exchange.png' %}" alt="" class="icon">
-                                <h4><a href="#">Educational Programs</a></h4>
-                                <p>We provide educational workshops and programs on the necessity and usage of agricultural technology.</p>
-                                <a href="#" class="read-more">Learn More</a>
+                                <h4>Educational Programs</h4>
+                                <p>We work with CBOs and non-profits to provide educational workshops and programs that raise awareness of the necessity and usage of agricultural technology.</p>
+                                <!-- <a href="#" class="read-more">Learn More</a> -->
                             </div>
                         </div>
                     </div>
@@ -199,9 +221,9 @@
                         <div class="work-block">
                             <div class="inner">
                                 <img src="{% static 'img/ecology.png' %}" alt="" class="icon">
-                                <h4><a href="#">Empower</a></h4>
+                                <h4>Empower</h4>
                                 <p>We provide job training and workforce development to the populations we serve who are looking to begin a career in ag-tech.</p>
-                                <a href="#" class="read-more">Learn More</a>
+                                <!-- <a href="#" class="read-more">Learn More</a> -->
                             </div>
                         </div>
                         
@@ -213,9 +235,9 @@
                     <div class="work-block">
                         <div class="inner">
                             <img src="{% static 'img/home.png' %}" alt="" class="icon">
-                            <h4><a href="#">Implement</a></h4>
-                            <p>We provide resources and consultation on how to design, implement and maintain closed-loop sustainable food systems.</p>
-                            <a href="#" class="read-more">Learn More</a>
+                            <h4>Implement</h4>
+                            <p>We assist with urban farmers with resources and consultation on how to design, implement and maintain sustainable food systems.</p>
+                            <!-- <a href="#" class="read-more">Learn More</a> -->
                         </div>
                     </div>
                    </div>
@@ -238,7 +260,6 @@
                             
                         </div>
                         <p>Welcome to the Wild!The UNFCU Foundation Headquarters | 24-01 44th Rd | Long Island City, NY 11101 Wednesday, September 26, 2018 from 6:00 PM to 9:00 PM (EDT)</p>
-                        <p>RSVP Here: Link</p>
                         <a href="https://www.eventbrite.com/e/welcome-to-the-wild-tickets-46744434863"><button class="reg og">R.S.V.P.</button></a>
                         <a href="https://www.instagram.com/changefoodforgood/"><button class="reg og">Follow US</button></a>
                     </div>
@@ -298,5 +319,18 @@
         </div>
     </section>
     <!--End Clients Section-->
+
+!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.10/js/mdb.min.js"></script>
+<script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
 
 {% endblock %}
