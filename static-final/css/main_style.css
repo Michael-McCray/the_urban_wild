@@ -25,7 +25,7 @@
     
 body{
 
-  font-family: "Raleway"
+  font-family: "Raleway";
 }
 
 .main-slider .title {
@@ -35,7 +35,7 @@ body{
     font-weight: bolder;
     color: #FFFFFF;
     text-align: center !important;
-    font-family: "Raleway";
+    font-family: "Raleway" !important;
 }
 
 .main-slider h2 {
@@ -81,4 +81,5 @@ a {
     text-decoration: none;
     cursor: pointer;
     color: #298252 !important;
+    font-family: "Raleway" !important;
 }

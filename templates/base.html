@@ -135,26 +135,26 @@
 
 
         <!-- Sticky Header -->
-        <div class="sticky-header">
-            <div class="auto-container clearfix">
+        <!-- <div class="sticky-header">
+            <div class="auto-container clearfix"> -->
                 <!--Logo-->
-                <div class="logo pull-left">
+               <!--  <div class="logo pull-left">
                     <a href="{% url 'index' %}" title=""><img style="height: 10vh" src="{% static 'img/logoW.png' %}" alt=""></a>
-                </div>
+                </div> -->
                 <!--Right Col-->
-                <div class="pull-right">
+                <!-- <div class="pull-right"> -->
                     <!-- Main Menu -->
-                    <nav class="main-menu">
-                        <div class="navbar-header">
+                  <!--   <nav class="main-menu">
+                        <div class="navbar-header"> -->
                             <!-- Toggle Button -->      
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                          <!--   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                        </div>
+                        </div> -->
                         
-                        <div class="navbar-collapse collapse clearfix">
+                      <!--   <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation pull-left clearfix">
                                 <li><a href="{% url 'index' %}">Home</a></li>
                                     <li><a href="{% url 'about' %}">About</a></li>
@@ -165,7 +165,7 @@
                                 </ul>
                             </ul>
                         </div>
-                    </nav>
+                    </nav> -->
                     <!-- Main Menu End-->
                 </div>
             </div>
@@ -183,9 +183,17 @@
                 <div class="copyright-text">&copy; <a href="index.html">The Urban Wild</a> 2018. All rights reserved.</div>
                 <div class="bottom-links">
                     <ul class="clearfix">
-                        <li><a href="#">About Us</a></li>
+                <li>
+                <a href="https://www.instagram.com/changefoodforgood/" target="_blank"><img src="{% static 'img/instagram.png' %}" alt=""></a>
+                </li>
+
+                <li>
+                <a href="https://www.facebook.com/The-Urban-Wild-2128194597431447/?hc_ref=ARTtsWcxtB-WCMjxlaTOw0yRVtnqWk-9V52rHDekCkp-qAr3_JQ-WfPi0UdSc3Zq8LU&fref=nf&__tn__=kC-R" target="_blank"><img src="{% static 'img/facebook.png' %}" alt=""></a>
+                </li>
+
+                        <!-- <li><a href="#">About Us</a></li>
                         <li><a href="donate.html">Donate Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Contact Us</a></li> -->
                     </ul>
                 </div>
             </div>
