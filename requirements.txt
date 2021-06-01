@@ -30,5 +30,5 @@ ratelim==0.1.6
 requests==2.18.4
 six==1.10.0
 ua-parser==0.8.0
-urllib3==1.22
+urllib3==1.26.5
 user-agents==1.1.0
