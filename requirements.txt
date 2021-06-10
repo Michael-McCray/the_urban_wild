@@ -6,7 +6,7 @@ chardet==3.0.4
 click==6.7
 decorator==4.3.0
 dj-database-url==0.4.2
-Django==1.8
+Django==2.2.24
 django-admin-sortable==2.1
 django-ckeditor==4.5.0
 django-grappelli==2.10.1
