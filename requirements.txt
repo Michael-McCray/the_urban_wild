@@ -1,5 +1,5 @@
 appdirs==1.4.3
-Babel==2.4.0
+Babel==2.9.1
 boto==2.48.0
 certifi==2018.4.16
 chardet==3.0.4
